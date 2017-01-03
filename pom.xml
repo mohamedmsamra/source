@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.eco.seamcat</groupId>
+    <artifactId>seamcat</artifactId>
+    <packaging>pom</packaging>
+    <version>5.0.1-SNAPSHOT</version>
+    <url>http://www.seamcat.org</url>
+    <modules>
+        <module>model</module>
+        <module>app</module>
+    </modules>
+    <properties>
+        <seamcat.version>5.0.1-SNAPSHOT</seamcat.version>
+        <log4j.version>1.2.8</log4j.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+	<developers>
+		<developer>
+			<id>mads</id>
+			<name>Mads Enevoldsen</name>
+			<email>mads.enevoldsen at jayway.com</email>
+			<organization>Jayway</organization>
+			<organizationUrl>http://www.jayway.com</organizationUrl>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
+    <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Logging dependencies            -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <dependency>
+                <groupId>org.log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Test dependencies            -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.8.1</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
